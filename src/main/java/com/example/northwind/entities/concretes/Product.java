@@ -1,19 +1,24 @@
 package com.example.northwind.entities.concretes;
 
-import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "products")
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
     private int id;
 
-    @Column(name = "catagory_id")
-    private int catagoryId;
+    @Column(name = "category_id")
+    private int categoryId;
 
     @Column(name = "product_name")
     private String productName;
@@ -27,16 +32,6 @@ public class Product {
     @Column(name = "quantity_per_unit")
     private String quantityPerUnit;
 
-    public Product(int id, int cataconcretesgoryId, String productName, double unitPrice, short unitsInStock, String quantityPerUnit) {
-        this.id = id;
-        this.catagoryId = catagoryId;
-        this.productName = productName;
-        this.unitPrice = unitPrice;
-        this.unitsInStock = unitsInStock;
-        this.quantityPerUnit = quantityPerUnit;
-    }
 
-    public Product() {
 
-    }
 }
