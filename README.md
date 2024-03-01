@@ -1,3 +1,3 @@
 
 Engin Demirog BootCamp: - Spring Boot, Connecting to PostgreSQL
-using Swagger, Hibernate
+using Swagger,JPA, Hibernate
